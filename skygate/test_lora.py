@@ -12,7 +12,7 @@ def woo_got_a_packet(packet):
 	else:
 		print("Packet=", packet)
 	
-mylora = LoRa(1, 434.450, 1)
+mylora = LoRa(Channel=0, Frequency=915.0, Mode=1, DIO0=4)
 
 mylora.listen_for_packets(woo_got_a_packet)
 
